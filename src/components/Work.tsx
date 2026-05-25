@@ -18,7 +18,7 @@ export function Work({ entity, locale }: Props) {
       <div className="container-page">
         <div className="grid md:grid-cols-12 gap-10 md:gap-12 mb-12 md:mb-16">
           <h2 className="md:col-span-5 text-3xl md:text-4xl">{s.work.heading}</h2>
-          <p className="md:col-span-7 text-muted text-lg max-w-prose">{s.work.intro}</p>
+          <p className="md:col-span-7 text-muted text-lg max-w-prose">{entity.c_workIntro}</p>
         </div>
         <ul className="divide-y divide-rule border-y border-rule">
           {cases.map((c) => (

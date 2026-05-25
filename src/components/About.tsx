@@ -23,7 +23,7 @@ export function About({ entity, locale }: Props) {
           </div>
         )}
         <div className="md:col-span-7">
-          <p className="eyebrow mb-4">{s.about.metaLabel}</p>
+          <p className="eyebrow mb-4">{entity.c_aboutMetaLabel}</p>
           <h2 className="text-3xl md:text-4xl mb-6">{s.about.heading}</h2>
           <p className="text-lg leading-relaxed text-ink/90 max-w-prose whitespace-pre-line">
             {entity.c_aboutBody}

@@ -6,13 +6,13 @@ type Props = { entity: AlexanderEntity; locale: Locale };
 export function Hero({ entity, locale }: Props) {
   const s = t(locale);
   const email = entity.emails[0];
-  const subject = encodeURIComponent(s.cta.subject);
+  const subject = encodeURIComponent(entity.c_ctaEmailSubject ?? "");
 
   return (
     <section className="container-page pt-16 md:pt-28 pb-20 md:pb-32">
       <div className="grid md:grid-cols-12 gap-10 md:gap-12 items-end">
         <div className="md:col-span-7">
-          <p className="eyebrow mb-6">{s.hero.eyebrow}</p>
+          <p className="eyebrow mb-6">{entity.c_heroEyebrow}</p>
           <h1 className="text-4xl md:text-6xl leading-[1.05] mb-6">{entity.c_tagline}</h1>
           <p className="text-lg md:text-xl text-muted max-w-prose mb-10">{entity.c_heroSubheadline}</p>
           <div className="flex flex-wrap items-center gap-4">

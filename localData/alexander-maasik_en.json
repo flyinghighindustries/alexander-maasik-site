@@ -1,25 +1,36 @@
 {
   "id": "alexander-maasik",
   "name": "Alexander Maasik",
+  "slug": "en",
   "emails": ["alexander.maasik@nobeldigital.ee"],
   "linkedInUrl": "https://www.linkedin.com/in/amaasik",
   "facebookPageUrl": "https://www.facebook.com/alexander.maasik",
   "twitterHandle": "amaasik",
+
   "c_tagline": "Marketing strategy for startups that need measurable growth.",
+  "c_heroEyebrow": "Marketing strategist · Tallinn",
   "c_heroSubheadline": "Eight years building content, SEO, and PPC programmes that tie back to revenue — not vanity metrics.",
   "c_heroPortrait": {
-    "url": "/assets/alexander-portrait.jpg",
-    "alternateText": "Portrait of Alexander Maasik",
-    "width": 1080,
-    "height": 1350
+    "image": {
+      "url": "/assets/alexander-portrait.jpg",
+      "alternateText": "Portrait of Alexander Maasik",
+      "width": 1080,
+      "height": 1350
+    }
   },
+
+  "c_aboutMetaLabel": "Based in Tallinn, working globally.",
   "c_aboutPhoto": {
-    "url": "/assets/alexander-casual.jpg",
-    "alternateText": "Alexander Maasik seated outdoors",
-    "width": 900,
-    "height": 900
+    "image": {
+      "url": "/assets/alexander-casual.jpg",
+      "alternateText": "Alexander Maasik seated outdoors",
+      "width": 900,
+      "height": 900
+    }
   },
   "c_aboutBody": "I've spent the last eight years leading marketing for B2B SaaS and product companies — most of that time in startups where every euro had to defend itself. I work across content marketing, SEO, PPC, and go-to-market strategy, and I train leaders and teams to keep marketing accountable to the business. I write, I measure, and I push back when a tactic can't be tied to a number. If you want activity, hire an agency. If you want results you can defend in a board meeting, let's talk.",
+
+  "c_servicesIntro": "Three focused engagements. Each one starts with a single email and a 30-minute call to see if there's a fit.",
   "c_serviceTitles": [
     "Marketing strategy & GTM",
     "Content marketing & SEO",
@@ -35,6 +46,7 @@
     "Content & SEO enquiry",
     "Training & coaching enquiry"
   ],
+
   "c_approachTitles": [
     "Tie every activity to a number",
     "Ship weekly, decide monthly",
@@ -45,6 +57,8 @@
     "Small experiments, honest readouts, and quarterly bets — not annual plans that calcify by March.",
     "Clear positioning is cheaper than paid acquisition. We fix the message first."
   ],
+
+  "c_workIntro": "A sample of clients and the outcomes we measured.",
   "c_caseClients": [
     "B2B SaaS · Workflow tooling",
     "Series A · Compliance",
@@ -60,6 +74,19 @@
     "Repositioned around a single category. Cut three paid channels, doubled down on one, and instrumented the funnel end-to-end.",
     "Hiring brief, interview rubric, and 90-day plan. Coached the new lead for the first quarter."
   ],
+
   "c_ctaHeadline": "Have a marketing problem worth solving?",
-  "c_ctaBody": "One email is enough. Tell me what you're trying to move and where you're stuck. I read everything I get and respond within two working days."
+  "c_ctaBody": "One email is enough. Tell me what you're trying to move and where you're stuck. I read everything I get and respond within two working days.",
+  "c_ctaEmailSubject": "Project inquiry via alexandermaasik.com",
+
+  "c_jobTitle": "Marketing Consultant",
+  "c_expertise": [
+    "SEO",
+    "Content Marketing",
+    "PPC",
+    "Marketing Strategy",
+    "Go-to-Market",
+    "Marketing Leadership"
+  ],
+  "c_yearsExperience": "8"
 }

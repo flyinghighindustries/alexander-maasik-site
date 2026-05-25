@@ -1,25 +1,36 @@
 {
   "id": "alexander-maasik",
   "name": "Alexander Maasik",
+  "slug": "",
   "emails": ["alexander.maasik@nobeldigital.ee"],
   "linkedInUrl": "https://www.linkedin.com/in/amaasik",
   "facebookPageUrl": "https://www.facebook.com/alexander.maasik",
   "twitterHandle": "amaasik",
+
   "c_tagline": "Turundusstrateegia idufirmadele, kes vajavad mõõdetavat kasvu.",
+  "c_heroEyebrow": "Turundusstrateeg · Tallinn",
   "c_heroSubheadline": "Kaheksa aastat sisuturunduse, SEO ja PPC programme, mis seovad iga eurot tuluga — mitte tühjade näitajatega.",
   "c_heroPortrait": {
-    "url": "/assets/alexander-portrait.jpg",
-    "alternateText": "Alexander Maasiku portree",
-    "width": 1080,
-    "height": 1350
+    "image": {
+      "url": "/assets/alexander-portrait.jpg",
+      "alternateText": "Alexander Maasiku portree",
+      "width": 1080,
+      "height": 1350
+    }
   },
+
+  "c_aboutMetaLabel": "Asun Tallinnas, töötan globaalselt.",
   "c_aboutPhoto": {
-    "url": "/assets/alexander-casual.jpg",
-    "alternateText": "Alexander Maasik vabas õhus",
-    "width": 900,
-    "height": 900
+    "image": {
+      "url": "/assets/alexander-casual.jpg",
+      "alternateText": "Alexander Maasik vabas õhus",
+      "width": 900,
+      "height": 900
+    }
   },
   "c_aboutBody": "Viimased kaheksa aastat olen juhtinud turundust B2B SaaS- ja tootefirmades — peamiselt idufirmades, kus iga euro pidi end ise õigustama. Töötan sisuturunduse, SEO, PPC ja turule sisenemise strateegia kallal ning koolitan juhte ja meeskondi, et hoida turundus äri ees vastutavana. Kirjutan, mõõdan ja vaidlen vastu, kui taktikat ei saa siduda numbriga. Kui soovid tegevust, palka agentuur. Kui soovid tulemusi, mida saab nõukogus kaitsta, räägime.",
+
+  "c_servicesIntro": "Kolm fokuseeritud koostöövormi. Iga koostöö algab ühest kirjast ja 30-minutilisest vestlusest, et näha, kas sobime.",
   "c_serviceTitles": [
     "Turundusstrateegia & GTM",
     "Sisuturundus & SEO",
@@ -35,6 +46,7 @@
     "Sisu & SEO päring",
     "Koolitus & juhendamine päring"
   ],
+
   "c_approachTitles": [
     "Seo iga tegevus numbriga",
     "Tee nädalas, otsusta kuus",
@@ -45,6 +57,8 @@
     "Väikesed eksperimendid, ausad ülevaated ja kvartaalsed panused — mitte aastaplaanid, mis märtsiks kivinevad.",
     "Selge positsioneering on odavam kui tasuline klientide soetamine. Parandame esmalt sõnumi."
   ],
+
+  "c_workIntro": "Valik kliente ja mõõdetud tulemusi.",
   "c_caseClients": [
     "B2B SaaS · Töövoo tarkvara",
     "A-seeria · Vastavus",
@@ -60,6 +74,19 @@
     "Positsioneerisin ümber ühe kategooria järgi. Kärpisin kolm tasulist kanalit, panustasin ühele ning instrumenteerisin müügilehtri otsast lõpuni.",
     "Värbamise briif, intervjuumaatriks ja 90-päevane plaan. Juhendasin uut juhti esimese kvartali jooksul."
   ],
+
   "c_ctaHeadline": "Kas sul on turundusprobleem, mida tasub lahendada?",
-  "c_ctaBody": "Üks kiri on piisav. Kirjelda, mida proovid liigutada ja kus oled kinni. Loen kõike, mis tuleb, ja vastan kahe tööpäeva jooksul."
+  "c_ctaBody": "Üks kiri on piisav. Kirjelda, mida proovid liigutada ja kus oled kinni. Loen kõike, mis tuleb, ja vastan kahe tööpäeva jooksul.",
+  "c_ctaEmailSubject": "Projekti päring alexandermaasik.com kaudu",
+
+  "c_jobTitle": "Turundusspetsialist",
+  "c_expertise": [
+    "SEO",
+    "Sisuturundus",
+    "PPC",
+    "Turundusstrateegia",
+    "Turule sisenemine",
+    "Turundusjuhtimine"
+  ],
+  "c_yearsExperience": "8"
 }

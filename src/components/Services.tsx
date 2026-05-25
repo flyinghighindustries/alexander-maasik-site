@@ -21,7 +21,7 @@ export function Services({ entity, locale }: Props) {
       <div className="container-page">
         <div className="grid md:grid-cols-12 gap-10 md:gap-12 mb-12 md:mb-16">
           <h2 className="md:col-span-5 text-3xl md:text-4xl">{s.services.heading}</h2>
-          <p className="md:col-span-7 text-muted text-lg max-w-prose">{s.services.intro}</p>
+          <p className="md:col-span-7 text-muted text-lg max-w-prose">{entity.c_servicesIntro}</p>
         </div>
         <ul className="grid md:grid-cols-3 gap-6 md:gap-8">
           {services.map((svc) => (
@@ -35,7 +35,7 @@ export function Services({ entity, locale }: Props) {
               </div>
               <a
                 className="mt-8 inline-flex items-center gap-2 text-sm font-medium no-underline hover:text-accent"
-                href={`mailto:${email}?subject=${encodeURIComponent(svc.emailSubject ?? s.cta.subject)}`}
+                href={`mailto:${email}?subject=${encodeURIComponent(svc.emailSubject ?? entity.c_ctaEmailSubject ?? "")}`}
               >
                 {s.services.ctaLabel}
                 <span aria-hidden>→</span>

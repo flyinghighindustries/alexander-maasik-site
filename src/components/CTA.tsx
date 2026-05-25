@@ -6,7 +6,7 @@ type Props = { entity: AlexanderEntity; locale: Locale };
 export function CTA({ entity, locale }: Props) {
   const s = t(locale);
   const email = entity.emails[0];
-  const subject = encodeURIComponent(s.cta.subject);
+  const subject = encodeURIComponent(entity.c_ctaEmailSubject ?? "");
 
   return (
     <section id="contact" className="border-t border-rule py-24 md:py-32">
