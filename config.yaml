@@ -1,0 +1,5 @@
+buildArtifacts: sites-config/ci.json
+builds:
+  - name: alexander-maasik-site
+    buildCommand: npm install && npm run build
+    requiredFiles: []

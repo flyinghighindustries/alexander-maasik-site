@@ -1,0 +1,65 @@
+{
+  "id": "alexander-maasik",
+  "name": "Alexander Maasik",
+  "emails": ["alexander.maasik@nobeldigital.ee"],
+  "linkedInUrl": "https://www.linkedin.com/in/amaasik",
+  "facebookPageUrl": "https://www.facebook.com/alexander.maasik",
+  "twitterHandle": "amaasik",
+  "c_tagline": "Turundusstrateegia idufirmadele, kes vajavad mõõdetavat kasvu.",
+  "c_heroSubheadline": "Kaheksa aastat sisuturunduse, SEO ja PPC programme, mis seovad iga eurot tuluga — mitte tühjade näitajatega.",
+  "c_heroPortrait": {
+    "url": "/assets/alexander-portrait.jpg",
+    "alternateText": "Alexander Maasiku portree",
+    "width": 1080,
+    "height": 1350
+  },
+  "c_aboutPhoto": {
+    "url": "/assets/alexander-casual.jpg",
+    "alternateText": "Alexander Maasik vabas õhus",
+    "width": 900,
+    "height": 900
+  },
+  "c_aboutBody": "Viimased kaheksa aastat olen juhtinud turundust B2B SaaS- ja tootefirmades — peamiselt idufirmades, kus iga euro pidi end ise õigustama. Töötan sisuturunduse, SEO, PPC ja turule sisenemise strateegia kallal ning koolitan juhte ja meeskondi, et hoida turundus äri ees vastutavana. Kirjutan, mõõdan ja vaidlen vastu, kui taktikat ei saa siduda numbriga. Kui soovid tegevust, palka agentuur. Kui soovid tulemusi, mida saab nõukogus kaitsta, räägime.",
+  "c_serviceTitles": [
+    "Turundusstrateegia & GTM",
+    "Sisuturundus & SEO",
+    "Juhtimine & meeskonna koolitus"
+  ],
+  "c_serviceBodies": [
+    "Selgelt põhjendatud plaan järgmiseks kahele kuni neljale kvartalile — positsioneerimine, kanalid, OKR-id ja tulemustahvel, mis tõestab, et see töötab.",
+    "Sisuprogrammid, mis on ehitatud ostukavatsuse ümber. Teemastrateegia, briifide kirjutamine, lehesisene teostus ja analüütika, mis loobub sellest, mis tulemust ei too.",
+    "Töötoad ja personaalne juhendamine turundusjuhtidele ja asutajatele. Kuidas seada OKR-e, hoida nädalast rütmi ja raporteerida ülespoole ilma ilustusteta."
+  ],
+  "c_serviceEmailSubjects": [
+    "Strateegia & GTM päring",
+    "Sisu & SEO päring",
+    "Koolitus & juhendamine päring"
+  ],
+  "c_approachTitles": [
+    "Seo iga tegevus numbriga",
+    "Tee nädalas, otsusta kuus",
+    "Kirjuta enne kui kulutad"
+  ],
+  "c_approachBodies": [
+    "Kui me ei suuda kampaaniat siduda tulu, müügitorustiku ega aktiveerimisega, lõpetame selle.",
+    "Väikesed eksperimendid, ausad ülevaated ja kvartaalsed panused — mitte aastaplaanid, mis märtsiks kivinevad.",
+    "Selge positsioneering on odavam kui tasuline klientide soetamine. Parandame esmalt sõnumi."
+  ],
+  "c_caseClients": [
+    "B2B SaaS · Töövoo tarkvara",
+    "A-seeria · Vastavus",
+    "Eesti scale-up · D2C"
+  ],
+  "c_caseResults": [
+    "Orgaaniline torustik 3,4× 14 kuuga",
+    "CAC -38%, tasuvusaeg alla 6 kuu",
+    "Esimene sisutöötaja täiel võimsusel 8 nädalaga"
+  ],
+  "c_caseBodies": [
+    "Ehitasin sisukalendri ümber ostukavatsuse märksõnade järgi. Pensionile 60% vanast sisust; allesjäänud lehed toovad nüüd suurema osa sissetulevatest kontaktidest.",
+    "Positsioneerisin ümber ühe kategooria järgi. Kärpisin kolm tasulist kanalit, panustasin ühele ning instrumenteerisin müügilehtri otsast lõpuni.",
+    "Värbamise briif, intervjuumaatriks ja 90-päevane plaan. Juhendasin uut juhti esimese kvartali jooksul."
+  ],
+  "c_ctaHeadline": "Kas sul on turundusprobleem, mida tasub lahendada?",
+  "c_ctaBody": "Üks kiri on piisav. Kirjelda, mida proovid liigutada ja kus oled kinni. Loen kõike, mis tuleb, ja vastan kahe tööpäeva jooksul."
+}
