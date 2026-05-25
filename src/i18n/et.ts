@@ -35,5 +35,23 @@ export const et: Strings = {
   footer: {
     rights: "Kõik õigused kaitstud.",
     builtOn: "Veebileht põhineb Yext Pages platvormil.",
+    privacyLink: "Privaatsus",
+    cookieSettings: "Küpsiste seaded",
+  },
+  cookie: {
+    heading: "Küpsised sellel veebilehel",
+    body: "See veebileht ei kasuta jälgimis- ega analüütikaküpsiseid. Lokaalselt salvestatakse ainult sinu valik sellelt ribalt, et see uuesti ei ilmuks.",
+    learnMore: "Loe täielikku privaatsuspoliitikat",
+    accept: "Nõustu",
+    reject: "Keeldu",
+  },
+  policy: {
+    heading: "Privaatsus ja küpsised",
+    tabsAriaLabel: "Privaatsuspoliitika sektsioonid",
+    privacyTab: "Privaatsus",
+    cookiesTab: "Küpsised",
+    close: "Sulge",
+    privacyFallback: "Privaatsuspoliitika sisu ei ole veel täidetud. Muuda Yextis välja c_privacyPolicyContent.",
+    cookiesFallback: "Küpsiste poliitika sisu ei ole veel täidetud. Muuda Yextis välja c_cookiesContent.",
   },
 };

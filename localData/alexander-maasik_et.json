@@ -88,5 +88,8 @@
     "Turule sisenemine",
     "Turundusjuhtimine"
   ],
-  "c_yearsExperience": "8"
+  "c_yearsExperience": "8",
+
+  "c_privacyPolicyContent": "(Kohaliku eelvaate kohatäide — Yextis välja c_privacyPolicyContent kaudu täidetav.)",
+  "c_cookiesContent": "(Kohaliku eelvaate kohatäide — Yextis välja c_cookiesContent kaudu täidetav.)"
 }

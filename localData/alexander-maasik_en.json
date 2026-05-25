@@ -88,5 +88,8 @@
     "Go-to-Market",
     "Marketing Leadership"
   ],
-  "c_yearsExperience": "8"
+  "c_yearsExperience": "8",
+
+  "c_privacyPolicyContent": "(Local-preview placeholder — populated in Yext via c_privacyPolicyContent for production.)",
+  "c_cookiesContent": "(Local-preview placeholder — populated in Yext via c_cookiesContent for production.)"
 }

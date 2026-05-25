@@ -16,6 +16,7 @@ import { Approach } from "@/components/Approach";
 import { Work } from "@/components/Work";
 import { CTA } from "@/components/CTA";
 import { Footer } from "@/components/Footer";
+import { CookieBanner } from "@/components/CookieBanner";
 import { allSchemas, canonicalUrl } from "@/lib/schema";
 
 // Env vars set in the Yext Pages site settings:
@@ -73,6 +74,9 @@ export const config: TemplateConfig = {
       "c_yearsExperience",
       "c_favicon",
       "c_ogImage",
+      // Legal / GDPR
+      "c_privacyPolicyContent",
+      "c_cookiesContent",
     ],
     localization: { locales: LOCALES, primary: false },
   },
@@ -169,6 +173,7 @@ const LocationTemplate = ({ document }: TemplateRenderProps) => {
         <CTA entity={doc} locale={locale} />
       </main>
       <Footer entity={doc} locale={locale} />
+      <CookieBanner entity={doc} locale={locale} />
     </div>
   );
 };

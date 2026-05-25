@@ -65,6 +65,10 @@ export type AlexanderEntity = {
   c_favicon?: YextImage;
   c_ogImage?: YextImage;
 
+  // Legal / GDPR
+  c_privacyPolicyContent?: string;
+  c_cookiesContent?: string;
+
   meta: { locale: Locale };
 };
 
