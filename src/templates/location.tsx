@@ -35,6 +35,7 @@ export const config: TemplateConfig = {
       // Identity / built-in
       "id",
       "name",
+      "slug",
       "emails",
       "linkedInUrl",
       "facebookPageUrl",
@@ -61,10 +62,18 @@ export const config: TemplateConfig = {
 };
 
 export const getPath: GetPath<TemplateProps> = ({ document }) => {
+  // Yext's recommended pattern: build URL from the entity's slug field.
+  // See: https://hitchhikers.yext.com/docs/pages/multiple-language-support/
+  //
+  // In Yext UI, set the slug field per language profile:
+  //   - Estonian (primary, root URL):  leave slug empty → falls through to "index"
+  //   - English alternate (/en):       set slug to "en"
+  //
+  // The fallback includes document.id to guarantee URL uniqueness if a slug
+  // is ever forgotten, preventing collision-induced deploy failures.
+  if (document.slug) return document.slug;
   const locale = (document.meta?.locale ?? "et") as Locale;
-  // Estonian is the primary locale on the Yext account, so it lives at root.
-  // English alternate is served from /en/.
-  return locale === "et" ? "index.html" : `${locale}/index.html`;
+  return locale === "et" ? "index" : `${locale}/${document.id}`;
 };
 
 export const getHeadConfig: GetHeadConfig<TemplateRenderProps> = ({ document }): HeadConfig => {
