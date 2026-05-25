@@ -17,16 +17,22 @@ import { Work } from "@/components/Work";
 import { CTA } from "@/components/CTA";
 import { Footer } from "@/components/Footer";
 import { CookieBanner } from "@/components/CookieBanner";
+import { AnalyticsProvider } from "@yext/pages-components";
 import { allSchemas, canonicalUrl } from "@/lib/schema";
 
 // Env vars set in the Yext Pages site settings:
-//   YEXT_PUBLIC_LOCATION_ENTITY_ID   numeric id returned by POST /v2/.../entities
-//   YEXT_PUBLIC_LOCATION_LOCALE_CODE comma-separated locales, e.g. "et,en"
+//   YEXT_PUBLIC_LOCATION_ENTITY_ID    numeric id returned by POST /v2/.../entities
+//   YEXT_PUBLIC_LOCATION_LOCALE_CODE  comma-separated locales, e.g. "et,en"
+//   YEXT_PUBLIC_EVENTS_API_KEY        Yext Events API key (Developer Console →
+//                                     API Keys → new key with Events read+write).
+//                                     Optional — site builds + serves without it,
+//                                     analytics just doesn't fire.
 const ENTITY_ID = process.env.YEXT_PUBLIC_LOCATION_ENTITY_ID ?? "";
 const LOCALES = (process.env.YEXT_PUBLIC_LOCATION_LOCALE_CODE ?? "et,en")
   .split(",")
   .map((l) => l.trim())
   .filter(Boolean);
+const EVENTS_API_KEY = process.env.YEXT_PUBLIC_EVENTS_API_KEY ?? "";
 
 export const config: TemplateConfig = {
   name: "alexander-maasik-location",
@@ -157,11 +163,11 @@ export const getHeadConfig: GetHeadConfig<TemplateRenderProps> = ({ document }):
 
 type Doc = TemplateRenderProps["document"] & AlexanderEntity;
 
-const LocationTemplate = ({ document }: TemplateRenderProps) => {
-  const doc = document as Doc;
+const LocationTemplate = (props: TemplateRenderProps) => {
+  const doc = props.document as Doc;
   const locale = (doc.meta?.locale ?? "et") as Locale;
 
-  return (
+  const page = (
     <div className="min-h-screen flex flex-col">
       <Header entity={doc} locale={locale} />
       <main className="flex-1">
@@ -175,6 +181,25 @@ const LocationTemplate = ({ document }: TemplateRenderProps) => {
       <Footer entity={doc} locale={locale} />
       <CookieBanner entity={doc} locale={locale} />
     </div>
+  );
+
+  // Yext Analytics with consent gating.
+  // - requireOptIn={true} → AnalyticsProvider holds all events until optIn() is
+  //   called. CookieBanner calls analytics.optIn() inside its Accept handler.
+  // - If EVENTS_API_KEY env var is absent (e.g. preview builds), skip the
+  //   provider entirely so the page still renders.
+  if (!EVENTS_API_KEY) return page;
+
+  return (
+    <AnalyticsProvider
+      apiKey={EVENTS_API_KEY}
+      templateData={props as never}
+      currency="EUR"
+      productionDomains={["alexandermaasik.com"]}
+      requireOptIn={true}
+    >
+      {page}
+    </AnalyticsProvider>
   );
 };
 

@@ -5,8 +5,13 @@ import { useCallback, useEffect, useState } from "react";
  *
  * Bump CONSENT_VERSION when the privacy/cookies policy materially changes —
  * existing users will be shown the banner again to re-consent.
+ *
+ * Version history:
+ *   v1 — initial release; no tracking at all
+ *   v2 — added Yext Analytics (first-party pageview/click tracking,
+ *        gated on consent)
  */
-export const CONSENT_VERSION = 1;
+export const CONSENT_VERSION = 2;
 const STORAGE_KEY = "alexander-maasik:consent";
 
 export type ConsentStatus = "accepted" | "rejected" | "unset";

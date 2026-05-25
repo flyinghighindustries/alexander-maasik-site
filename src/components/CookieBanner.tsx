@@ -1,4 +1,5 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
+import { useAnalytics } from "@yext/pages-components";
 import { useConsent } from "@/hooks/useConsent";
 import { PolicyDialog } from "@/components/PolicyDialog";
 import { t } from "@/i18n";
@@ -14,11 +15,27 @@ type Props = { entity: AlexanderEntity; locale: Locale };
  * - Opens the privacy/cookies policy dialog inline.
  * - Rejection sticks — site continues to work; only essential storage
  *   (this very consent record) is set.
+ * - Accept → calls Yext analytics.optIn() so AnalyticsProvider starts
+ *   firing events. Reject → never call optIn(); events stay blocked.
+ * - On mount, if status was previously "accepted" (return visitor), call
+ *   optIn() so analytics resume without showing the banner again.
  */
 export function CookieBanner({ entity, locale }: Props) {
   const s = t(locale);
   const { status, mounted, accept, reject } = useConsent();
+  const analytics = useAnalytics();
   const [dialogOpen, setDialogOpen] = useState(false);
+
+  // Sync analytics opt-in with stored consent on every mount.
+  // Safe to call optIn() multiple times — Yext's provider is idempotent.
+  useEffect(() => {
+    if (status === "accepted") analytics?.optIn?.();
+  }, [status, analytics]);
+
+  const handleAccept = () => {
+    accept();
+    analytics?.optIn?.();
+  };
 
   const showBanner = mounted && status === "unset";
 
@@ -60,7 +77,7 @@ export function CookieBanner({ entity, locale }: Props) {
                   </button>
                   <button
                     type="button"
-                    onClick={accept}
+                    onClick={handleAccept}
                     className="btn-primary !py-2 !px-5 text-sm"
                   >
                     {s.cookie.accept}
