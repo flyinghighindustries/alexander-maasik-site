@@ -20,12 +20,14 @@ export function Hero({ entity, locale }: Props) {
             <a className="btn-secondary" href="#approach">{s.hero.secondaryCta}</a>
           </div>
         </div>
-        {entity.c_heroPortrait?.url && (
+        {entity.c_heroPortrait?.image?.url && (
           <div className="md:col-span-5">
             <div className="aspect-[4/5] w-full overflow-hidden rounded-sm bg-rule">
               <img
-                src={entity.c_heroPortrait.url}
-                alt={entity.c_heroPortrait.alternateText ?? entity.name}
+                src={entity.c_heroPortrait.image.url}
+                alt={entity.c_heroPortrait.image.alternateText ?? entity.name}
+                width={entity.c_heroPortrait.image.width}
+                height={entity.c_heroPortrait.image.height}
                 className="h-full w-full object-cover"
                 loading="eager"
               />

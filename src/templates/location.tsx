@@ -61,9 +61,10 @@ export const config: TemplateConfig = {
 };
 
 export const getPath: GetPath<TemplateProps> = ({ document }) => {
-  const locale = (document.meta?.locale ?? "en") as Locale;
-  // English at root, alternates under /<locale>/ — matches Sendoplex pattern.
-  return locale === "en" ? "index.html" : `${locale}/index.html`;
+  const locale = (document.meta?.locale ?? "et") as Locale;
+  // Estonian is the primary locale on the Yext account, so it lives at root.
+  // English alternate is served from /en/.
+  return locale === "et" ? "index.html" : `${locale}/index.html`;
 };
 
 export const getHeadConfig: GetHeadConfig<TemplateRenderProps> = ({ document }): HeadConfig => {

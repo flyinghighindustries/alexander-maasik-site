@@ -1,10 +1,15 @@
 export type Locale = "en" | "et";
 
-export type YextImage = {
+// Yext image fields wrap the actual image one level deep under `.image`.
+// The stream returns: { image: { url, width, height, alternateText? } }
+export type YextImageRef = {
   url: string;
-  alternateText?: string;
   width?: number;
   height?: number;
+  alternateText?: string;
+};
+export type YextImage = {
+  image: YextImageRef;
 };
 
 /**

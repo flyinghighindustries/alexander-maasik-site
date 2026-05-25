@@ -6,13 +6,16 @@ type Props = { entity: AlexanderEntity; locale: Locale };
 export function Header({ entity, locale }: Props) {
   const s = t(locale);
   const email = entity.emails[0];
-  const otherLocale: Locale = locale === "en" ? "et" : "en";
-  const otherLocaleHref = `/?lang=${otherLocale}`;
+  // Estonian (primary) lives at /, English alternate at /en/. Mirror getPath() in
+  // src/templates/location.tsx — if you change one, change the other.
+  const otherLocale: Locale = locale === "et" ? "en" : "et";
+  const otherLocaleHref = otherLocale === "et" ? "/" : "/en/";
+  const selfHref = locale === "et" ? "/" : "/en/";
 
   return (
     <header className="border-b border-rule bg-paper/90 backdrop-blur sticky top-0 z-30">
       <div className="container-page flex items-center justify-between py-4">
-        <a href={`/?lang=${locale}`} className="font-serif text-lg tracking-tight2 no-underline">
+        <a href={selfHref} className="font-serif text-lg tracking-tight2 no-underline">
           {entity.name}
         </a>
         <nav className="hidden md:flex items-center gap-8 text-sm">
