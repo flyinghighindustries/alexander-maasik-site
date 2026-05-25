@@ -6,11 +6,14 @@ type Props = { entity: AlexanderEntity; locale: Locale };
 export function Header({ entity, locale }: Props) {
   const s = t(locale);
   const email = entity.emails[0];
-  // Estonian (primary) lives at /, English alternate at /en/. Mirror getPath() in
-  // src/templates/location.tsx — if you change one, change the other.
+  // Estonian (primary) lives at /, English alternate at /en/index.html.
+  // Yext's CDN does NOT auto-rewrite /en/ → /en/index.html, so the href must
+  // include the explicit filename to match what getPath() emits.
+  // If you change either side, change both — getPath() lives in
+  // src/templates/location.tsx.
   const otherLocale: Locale = locale === "et" ? "en" : "et";
-  const otherLocaleHref = otherLocale === "et" ? "/" : "/en/";
-  const selfHref = locale === "et" ? "/" : "/en/";
+  const otherLocaleHref = otherLocale === "et" ? "/" : `/${otherLocale}/index.html`;
+  const selfHref = locale === "et" ? "/" : `/${locale}/index.html`;
 
   return (
     <header className="border-b border-rule bg-paper/90 backdrop-blur sticky top-0 z-30">
