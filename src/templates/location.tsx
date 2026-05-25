@@ -87,7 +87,7 @@ export const getHeadConfig: GetHeadConfig<TemplateRenderProps> = ({ document }):
 
 type Doc = TemplateRenderProps["document"] & AlexanderEntity;
 
-export default function LocationTemplate({ document }: TemplateRenderProps) {
+const LocationTemplate = ({ document }: TemplateRenderProps) => {
   const doc = document as Doc;
   const locale = (doc.meta?.locale ?? "en") as Locale;
 
@@ -105,4 +105,6 @@ export default function LocationTemplate({ document }: TemplateRenderProps) {
       <Footer entity={doc} locale={locale} />
     </div>
   );
-}
+};
+
+export default LocationTemplate;
