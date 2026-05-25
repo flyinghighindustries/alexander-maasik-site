@@ -5,15 +5,27 @@ import { fileURLToPath } from "node:url";
 
 const __dirname = path.dirname(fileURLToPath(import.meta.url));
 
-export default defineConfig({
-  plugins: [react()],
-  resolve: {
-    alias: { "@": path.resolve(__dirname, "./src") },
-  },
-  // Serve files from static/ at the URL root so /assets/foo.jpg resolves in dev
-  publicDir: "static",
-  server: {
-    port: 5173,
-    open: "/?lang=en",
-  },
+// Two modes:
+//   - `vite` (dev)   → plain Vite + main.tsx + localData/   (no Yext account needed)
+//   - `vite build`   → loads @yext/pages plugin, generates per-entity per-locale HTML
+//                      using the stream config in src/templates/location.tsx
+export default defineConfig(async ({ command }) => {
+  const plugins = [react()];
+
+  if (command === "build") {
+    const yextPlugin = (await import("@yext/pages/vite-plugin")).default;
+    plugins.push(yextPlugin());
+  }
+
+  return {
+    plugins,
+    resolve: {
+      alias: { "@": path.resolve(__dirname, "./src") },
+    },
+    publicDir: "static",
+    server: {
+      port: 5173,
+      open: "/?lang=en",
+    },
+  };
 });
